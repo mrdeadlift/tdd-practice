@@ -1,6 +1,8 @@
 package com.example.tdd.demo.money;
 
-public class Money {
+import com.example.tdd.demo.interfaces.Expression;
+
+public class Money implements Expression {
     protected int amount;
     protected String currency;
 
@@ -35,5 +37,9 @@ public class Money {
 
     public String toString(){
         return amount + "" + currency;
+    }
+
+    public Expression plus(Money addend){
+        return new Money(amount + addend.amount, currency());
     }
 }
