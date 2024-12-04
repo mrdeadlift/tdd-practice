@@ -12,7 +12,7 @@ public class Money implements Expression {
     }
 
     // abstract Money times(int multiplier);
-    Expression times(int multiplier){
+    public Expression times(int multiplier){
         return new Money(amount * multiplier, currency);
     }
     // abstract String currency();
