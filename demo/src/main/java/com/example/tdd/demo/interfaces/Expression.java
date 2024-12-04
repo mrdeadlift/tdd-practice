@@ -1,7 +1,8 @@
 package com.example.tdd.demo.interfaces;
 
+import com.example.tdd.demo.money.Bank;
 import com.example.tdd.demo.money.Money;
 
 public interface Expression {
-    Money reduce(String to);
+    Money reduce(Bank bank, String to);
 }
